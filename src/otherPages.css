@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=========sign========*/
+@layer components{
+     /*look at main*/
+}
+
+/*=========location========*/
+@layer components{
+   .location_page{
+    @apply  w-full h-[100vh]  bg-cover bg-no-repeat bg-[url('../public\imgs\mapbackground1.jpg')]
+    flex items-center flex-col;
+   }
+}
+.google_map{
+    @apply w-[500px] h-[500px];
+}

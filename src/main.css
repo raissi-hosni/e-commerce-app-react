@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  *{
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    transition: all .2s linear;
+    @apply m-0 p-0 list-none box-border outline-none capitalize ;
+  }
+  
+  html,.home {
+    @apply box-border overflow-x-hidden scroll-smooth scroll-pt-[5.5rem] text-[62,5%];
+  }
+}
+@layer components{
+  .flexcenter{
+    @apply flex justify-center items-center;
+  }
+  .flexbetween{
+    @apply flex justify-between items-center;
+  }
+  .home_swiper{
+    @apply flexcenter  h-[85vh] w-full bg-[#eee] ;
+  }
+  .swiper_elements{
+    @apply  flex justify-evenly items-center max-sm:flex-col-reverse w-full h-full pl-20  max-sm:pl-1  ;
+  }
+  .slide_details{
+    @apply flex justify-center flex-col max-sm:items-center max-sm:px-1  gap-8 max-sm:gap-2  h-full max-w-[60%] max-sm:max-w-full    ;
+  }
+  .swiper_btn{
+    @apply flexcenter p-2 bg-green-600 rounded-md w-36 max-sm:w-24 max-sm:text-sm text-white hover:w-40 ml-10 max-sm:ml-0
+     font-bold capitalize;
+  }
+  /*=====================popular==================*/
+   .section{
+    @apply w-full  flexcenter flex-col gap-1;
+   }
+  .main_pre_title{
+        @apply text-lg font-bold text-green-600;
+    }
+  .main_title{
+    @apply text-2xl font-bold uppercase text-center max-sm:text-xl;
+  }
+  .section_block{
+    @apply w-[80%] max-sm:w-[90%] border-t-2 p-2 border-[#514f4f] flex flex-wrap justify-evenly items-center
+    gap-3;
+  }
+  .pop_card{       
+    @apply w-[300px] h-[350px] bg-[#fff] text-center overflow-hidden relative border-[.1rem] border-[#918e8e]
+     p-3 rounded-md flex justify-around items-center flex-col shadow-2xl ;
+  }
+  .rate{
+    @apply flexcenter gap-1;
+  }
+  .card_btn{
+    @apply w-32 h-10 flexcenter p-2 bg-green-600 rounded-md  text-white 
+    font-bold capitalize hover:scale-105 max-xm:w-28 max-xm:h-8 ;
+  }
+  
+  .like{
+    @apply  w-10 h-10 rounded-full bg-[#c2bdbd] flexcenter border border-black absolute
+     ring-1 ring-[#c2bdbd] top-3 -left-10 max-xsm:w-8 max-xsm:h-8  ;
+  }
+  .like_btn{
+    @apply p-[2px] border-r border-r-black h-full hover:bg-orange-500 rounded-l-full;
+  }
+  .dislike_btn{
+    @apply p-[2px] h-full rounded-r-full hover:bg-green-600;
+  }
+  .heart_btn{
+    @apply flexcenter absolute w-10 h-10 bg-[#c2bdbd] hover:bg-orange-500 rounded-full
+     border ring-1 ring-[#c2bdbd] top-3 -right-10 max-xsm:w-8 max-xsm:h-8 ;
+  }
+  /*=================top_informatic_Products=======*/
+  .controle_swiper_btn{
+    @apply hover:bg-gray-500 p-1 hover:scale-110 hover:text-orange-600 cursor-pointer ;
+  }
+  
+  .Top_products{
+    @apply w-full flexcenter flex-col border-x-[18px] border-t-[18px] border-[#fff] mt-4
+     overflow-hidden select-none  max-xm:border-x-[8px];
+  }
+  .swiper_cards_btn{
+    @apply w-32 h-8 bg-green-500 rounded-md hover:scale-105;
+  }
+  .resize_card{
+    @apply max-xl:max-w-[250px] max-xm:max-w-[220px] max-xm:h-[370px] max-xl:max-h-[300px];
+  }
+  /*====================aboutus=========*/
+   .aboutus{
+    @apply flexcenter my-2 w-[1024px] h-[400px] border-2 border-[#878383] max-lmd:flex-col
+     max-lmd:h-auto max-lmd:w-auto overflow-hidden  ;
+   }
+   .about_ad{
+    @apply w-full border border-[#6a6767] rounded-md flexcenter p-1 gap-2 max-w-44 h-12 text-sm;
+   }
+   .about_btn{
+    @apply w-32 h-10 p-3 bg-green-500 rounded-lg flexcenter capitalize text-white font-bold
+    ml-7 hover:bg-green-600 hover:w-36 ;
+   }
+   /*====================week's discount=============*/
+   .discount_card{
+      @apply max-w-[300px] h-[350px] bg-[#fff]  overflow-hidden relative border-[.1rem] border-[#918e8e]
+      rounded-md flex  items-center justify-between flex-col shadow-2xl ;
+   }
+   .discount_details{
+    @apply flexcenter gap-5 flex-col w-[300px]  max-h-[350px]  p-3  ;
+   }
+   .discount_description{
+    @apply hidden backdrop-blur-md bg-[#c7c5c5] p-3 w-full  transition-all duration-300 ease-in-out;
+   }
+   .discount_card_btn{
+    @apply flexcenter w-8 h-8 rounded-full hover:bg-orange-500;
+   }
+   .social{
+    @apply hidden items-center justify-center w-20 h-8  gap-2 py-2  absolute -bottom-7 hover:flex ;
+   }
+   .block_share{
+    @apply absolute flexcenter flex-col gap-4 -right-10 top-3 ;
+   }
+  
+   .discount_card_share{
+    @apply flexcenter w-8 h-8 rounded-full hover:bg-orange-500 relative;
+   }
+   .discount_card_share:hover .social{
+    display: flex !important;
+   }
+   /*=====================spacial deal ==================*/
+   .special_deal {
+    @apply  flexcenter flex-row-reverse my-2 w-[1024px] h-[400px] border-2 border-[#878383] max-lmd:flex-col
+    max-lmd:h-auto max-lmd:w-auto max-lmd:py-1 overflow-hidden bg-[#fff] ;
+   }
+   .featured_card{
+    @apply flex flex-col items-center w-[350px] h-[550px] max-xm:h-[450px] border border-[#8f8989] rounded-md p-2.5
+    bg-[#fff] ;
+   }
+   .featured_img{
+    @apply flexcenter w-full h-[50%] max-xm:h-[40%];
+   }
+   .featured_details{
+    @apply flex flex-col p-1 justify-between  border-t  border-t-[#7b7676] h-[50%] max-xm:h-[60%];
+   }
+   .block_imgs{
+    @apply w-[80%] h-full flexcenter;
+   }
+   .image_featured{
+    @apply max-w-full max-h-full  ;
+   }
+   /*=================top sport products=======*/
+   .sport_card {
+    @apply flexcenter flex-col w-[220px] h-[220px] bg-[#fff] relative;
+   }
+   /*==========footer=====================*/
+   .footer {
+    @apply flexcenter flex-col w-full max-h-[900px]  bg-[#fff] mt-16;
+  }
+ .sub_email{
+  @apply w-[250px] max-m:w-full h-9 p-2 border bg-[#9e9c9c] text-sm text-black rounded-lg placeholder:text-black;
+ }
+ .sub_hov{
+  @apply hover:translate-x-3 text-sm ;
+ }
+ .flow_hov{
+  @apply hover:-translate-y-2;
+ }
+  }
+  
+ 
+
+  

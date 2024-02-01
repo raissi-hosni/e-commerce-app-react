@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+   
+    .flexcenter{
+     @apply flex justify-center items-center;
+    }
+    .flexbetween{
+     @apply flex justify-between items-center;
+    }
+    .header{
+     @apply  flexcenter flex-col select-none fixed right-[2px] left-[2px] top-[0.5px] bg-gradient-to-b from-[#585656] to-[#a49f9f] 
+     rounded-md z-10  ;
+    }
+    .menu-a{
+        background-size: 200% 100%;
+        background-position: -100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        @apply border-b-transparent border-b-2 duration-75 ease-linear bg-gradient-to-r from-orange-600
+        to-white hover:bg-left select-none hover:before:w-full before:content-[''] relative;
+      }
+      .menu-a:before{
+        @apply w-0 h-[2px] absolute block bg-white bottom-[-2px] left-0 transition-all duration-300
+        ease-in-out;
+    }
+
+    .showbar_nav1{
+        @apply hidden;
+    }
+   
+     /*==================first nav===================*/
+    .first_nav{
+     @apply flexbetween py-1 px-2  w-full bg-transparent rounded-t-md;
+    }
+    .logo{
+        @apply flex text-2xl font-bold transition-all duration-500 ease-in-out
+        hover:drop-shadow-lg hover:scale-105 max-sm:text-lg cursor-pointer;
+    }
+    .public{
+        @apply w-[40%] h-[40px] bg-orange-300 rounded-lg text-white text-[18px]
+         font-semibold max-lmd:hidden relative overflow-hidden;
+    }
+    .robot_pub{
+        @apply flexcenter absolute animate-robanim right-[-250px];
+    }
+    .search_nav1{
+        @apply hidden max-sm:flex max-xsm:hidden flex-col justify-center items-center  bg-[#fff] shadow-2xl
+         w-[230px] border rounded-2xl relative ;
+    }
+    .autocom-box2{
+        @apply absolute max-h-72 w-full overflow-y-auto flex flex-col justify-center px-2 bg-[#fff] rounded-md top-[100%] mt-[5px]  ;
+    }
+    .autocom-list2{
+        @apply select-text flex flex-col gap-1 text-[12px] ;
+    }
+    .phone_search{
+        @apply hidden  max-xsm:flex hover:rotate-12 hover:scale-110 hover:drop-shadow-2xl;
+    }
+    .nav-btn{
+        @apply bg-white border p-1 rounded-full hover:bg-orange-400 transition-all 
+        duration-500 ease-in-out hover:scale-105 max-sm:p-[2px] ring-1 ring-[#6e6d6d]; 
+    }
+    .shopnum{
+        @apply absolute text-orange-600 text-sm font-bold -top-2 left-[65%] rounded-full  ;
+    }
+    .search_area{
+        @apply  fixed inset-0 bg-[#c8ad7f] hidden z-[55] items-center gap-8 flex-col pt-10 transition-all
+        ease-linear duration-1000;
+    }
+    .search_nav_phone{
+        @apply hidden  max-xsm:flex justify-center items-center flex-col  bg-[#fff] shadow-2xl
+        w-[230px] border rounded-2xl relative max-h-8 ;
+    }
+    .autocom-list3{
+        @apply select-text flex flex-col gap-1 text-[12px] ;
+    }
+    /*=============shopping====================*/
+    .shopping{
+        margin: 0 auto;
+        @apply w-[60%]  max-h-[400px] fixed bg-[#fff] p-2 rounded-lg  z-40 top-[20%] left-[20%] max-lg:flex-col 
+         max-lg:overflow-y-scroll shadow-2xl hidden max-md:w-[90%] max-md:left-[5%];
+    }
+    .total_price{
+        @apply flex items-center gap-1 py-3;
+    }
+    .cal_price{
+        @apply text-lg text-blue-900 font-extralight;
+    }
+    .products{
+        @apply flex flex-col max-h-[85%] overflow-auto w-full ;
+    }
+    .colum{
+        @apply w-[14%] h-16 p-0.5 text-start  text-xs overflow-hidden font-semibold ;
+    }
+    .col_img{
+        @apply max-h-[90%];
+    }
+    .row{
+        @apply border-b-2 p-0.5 text-center;
+    }
+    .add_btn{
+        @apply w-[50%] h-7 rounded-full bg-orange-600 flexcenter text-sm;
+    }
+    .remove_btn{
+        @apply w-7 h-7 rounded-full bg-red-600 text-sm flexcenter m-auto ;
+    }
+    .shop_inp{
+        @apply w-full h-9 border p-1 rounded-md text-sm text-black  bg-[#a8a6a6]  placeholder:text-white;
+    }
+    .liv_btn{
+        @apply bg-green-500 text-white text-lg font-bold rounded-md py-1 px-4 flexcenter hover:bg-green-600;
+    }
+    .online_btn{
+        @apply bg-blue-600 text-white text-lg font-bold rounded-md py-1 px-4 flexcenter  hover:bg-blue-800;
+    }
+
+    /*=======================sign=====================================*/
+     .sign_block{
+        @apply  bg-[#fff]  h-[100vh] z-[1000] flex flex-col items-center gap-3 p-2 overflow-y-auto ;
+     }
+    .sign{
+        @apply h-auto max-w-[320px] border border-black flexbetween flex-col;
+    
+     }
+     .signup{
+        @apply p-2 flex flex-col gap-3;
+     }
+     .signin{
+        @apply signup;
+     }
+     .labl{
+        @apply text-sm font-bold;
+     }
+     .inp{
+        @apply border border-[#737171] h-8 w-full text-sm p-2;
+     }
+
+
+    /*=====================================second navbar====================*/
+        .second-nav{
+            @apply flexbetween bg-transparent w-full h-auto px-3 py-2 rounded-b-md relative max-sm:hidden;
+        }
+        /*============time=============*/
+            .time{
+                @apply flexcenter border-[3px] border-blue-400 p-2 w-[70px] h-9 rounded-3xl text-[12px]
+                 font-bold text-white italic max-lg:hidden;
+            }
+        /*=========search=============*/
+            .search_block{
+                @apply  absolute flexcenter flex-col right-16 top-[60%] bg-[#fff] shadow-2xl w-[270px] border rounded-2xl ;
+            }
+            .search_input{
+                @apply w-full h-8 flex items-center p-1 max-sm:h-6 ;
+            }
+            .input_text{ 
+                @apply w-[88%] h-full bg-transparent text-[13px] p-1 font-bold;
+            }
+            .autocom-box{
+                @apply max-h-72 w-full overflow-y-auto flex flex-col justify-center px-2  ;
+            }
+            .autocom-list{
+                @apply select-text flex flex-col gap-1 text-[12px] ;
+            }
+            .search-elements{
+                @apply hover:bg-slate-300 cursor-pointer rounded-lg p-1;
+            }
+            .search_btn{
+                @apply hover:rotate-12 hover:scale-105
+            }
+
+        /*===================sidebar=========================*/
+            .side{
+                @apply fixed -top-[1px] -left-full h-[100.1vh] /*-right-[2px]*/ flex transition-all duration-100
+                ease-linear z-50 w-full select-none;
+            }
+            .sidebar{
+                @apply h-full  w-64 bg-[#eee] rounded-l-md flex flex-col justify-between p-[2px]  pb-5;
+            }
+            .profile{
+                @apply flex w-full h-[30%] bg-[#cdcbcb] rounded-t-md  ;
+            }
+            .user-account{
+                @apply w-[82%] h-full flexbetween flex-col py-2 ;
+            }
+            .user_picture{
+                @apply rounded-full bg-white w-24 h-24 flexcenter border-2 border-black;
+            }
+            .side-window{
+                @apply h-full w-full bg-black  opacity-70 rounded-r-md ;
+            }
+            .side_products{
+                @apply border-l border-[#626161] hidden flex-col gap-1 items-start ml-2 w-full text-sm text-[#403e3e] ;
+            }
+            .side_element{
+                @apply cursor-pointer hover:translate-x-2 hover:text-[#232323]  transition-all duration-150 ease-linear
+                flex  gap-1 ;
+            }
+        /*====================left button==================*/
+            .leftbtn{
+                @apply fixed -left-[130px] top-[40%]  border-none bg-transparent  flexcenter flex-col gap-5
+                select-none z-20 ;
+            }
+            .play{
+                @apply flex justify-end items-center gap-2 w-40 h-11  pr-2  rounded-lg relative text-sm font-bold
+                text-white hover:translate-x-16 cursor-pointer;
+            }
+            .playmusic{
+                @apply play bg-blue-500  ;
+            }
+            .playmode{
+                @apply play bg-green-700  ;
+            }
+        /*==============================test connection===================*/
+            .network{
+                @apply fixed flex bg-[#202020] max-sm:bg-transparent top-[65%] left-28 rounded-lg z-[50]  ;
+            }
+            .net{
+                @apply bg-transparent  w-[350px] max-sm:w-auto h-14 flexbetween gap-3 p-2 relative;
+            }
+            .offnet{
+                @apply net ;
+            }
+            .onnet{
+                @apply net ;
+            }
+            .refreshBtn{
+                @apply text-blue-800 font-bold text-sm hover:scale-110 max-sm:hidden;
+            }
+        
+ }
